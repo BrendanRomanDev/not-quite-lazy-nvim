@@ -17,6 +17,13 @@ local opts = {
   silent = true,
 }
 
+-- create a copy rel path cmd for use in neotree (or anywhere else)
+vim.api.nvim_create_user_command("Cppath", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
+
 --  default lazy keymap conflicts with format, make it <leader>ll instead
 keydel("n", "<leader>l", opts)
 keymap("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
