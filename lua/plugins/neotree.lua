@@ -1,6 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
+    close_if_last_window = true,
     filesystem = {
       commands = {
         copy_filepath_opts = function(state)

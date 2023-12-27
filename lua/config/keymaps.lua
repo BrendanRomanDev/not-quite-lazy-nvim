@@ -30,7 +30,7 @@ keymap("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 -- quit buffertab with shift-q
 -- -- may need to chnge to bdelete! if gets finnicky
-keymap("n", "<S-q>", "<cmd>:bw!<CR>", opts)
+keymap("n", "<S-q>", "<cmd>:bd!<CR>", opts)
 
 -- clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
