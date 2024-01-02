@@ -28,6 +28,14 @@ end, {})
 keydel("n", "<leader>l", opts)
 keymap("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
+-- Neovim makes <Esc>[j|K] emulate <Alt-[j|k]> for some reason, which causes line
+-- swapping for some reason, which causes line swapping.
+-- Unmap <Alt-[j|k]>
+keymap("n", "<A-j>", "<Nop>", opts)
+keymap("n", "<A-k>", "<Nop>", opts)
+keymap("x", "<A-j>", "<Nop>", opts)
+keymap("x", "<A-j>", "<Nop>", opts)
+
 -- quit buffertab with shift-q
 -- -- may need to chnge to bdelete! if gets finnicky
 keymap("n", "<S-q>", "<cmd>:bd!<CR>", opts)
