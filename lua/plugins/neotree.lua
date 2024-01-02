@@ -1,9 +1,14 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  keys = {
+    { "<leader>e", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
+    { "<leader>E", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
+  },
   opts = {
     close_if_last_window = true,
     filesystem = {
       commands = {
+        -- change so leader E is open at cwd
         copy_filepath_opts = function(state)
           -- NeoTree is based on [NuiTree](https://github.com/MunifTanjim/nui.nvim/tree/main/lua/nui/tree)
           -- The node is based on [NuiNode](https://github.com/MunifTanjim/nui.nvim/tree/main/lua/nui/tree#nuitreenode)
