@@ -42,10 +42,6 @@ keymap("n", "<A-k>", "<Nop>", opts)
 keymap("x", "<A-j>", "<Nop>", opts)
 keymap("x", "<A-j>", "<Nop>", opts)
 
--- quit buffertab with shift-q
--- -- may need to chnge to bdelete! if gets finnicky
-keymap("n", "<S-q>", "<cmd>:bd!<CR>", opts)
-
 -- clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
