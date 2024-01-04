@@ -7,6 +7,7 @@ return {
         "selene",
         "luacheck",
         "shellcheck",
+        "shfmt",
         -- "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
