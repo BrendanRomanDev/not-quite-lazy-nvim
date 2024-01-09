@@ -1,5 +1,6 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  enabled = false,
   keys = {
     { "<leader>e", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
     { "<leader>E", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
@@ -8,10 +9,7 @@ return {
     close_if_last_window = true,
     filesystem = {
       commands = {
-        -- change so leader E is open at cwd
         copy_filepath_opts = function(state)
-          -- NeoTree is based on [NuiTree](https://github.com/MunifTanjim/nui.nvim/tree/main/lua/nui/tree)
-          -- The node is based on [NuiNode](https://github.com/MunifTanjim/nui.nvim/tree/main/lua/nui/tree#nuitreenode)
           local node = state.tree:get_node()
           local filepath = node:get_id()
           local filename = node.name
@@ -26,7 +24,6 @@ return {
             modify(filename, ":e"),
           }
 
-          -- absolute path to clipboard
           local i = vim.fn.inputlist({
             "Choose to copy to clipboard:",
             "1. Absolute path: " .. results[1],
@@ -49,11 +46,7 @@ return {
       },
       window = {
         mappings = {
-          --  mapping over 'o' which will override the 'show help' and
-          --  subsequent 'sort' mappings
-          --  https://github.com/nvim-neo-tree/neo-tree.nvim/blob/77d9f484b88fd380386b46ed9206e5374d69d9d8/lua/neo-tree/defaults.lua#L544C3-L556C9
           ["o"] = "open",
-          -- unmap the default sort options
           ["oc"] = "",
           ["od"] = "",
           ["og"] = "",
@@ -61,7 +54,6 @@ return {
           ["on"] = "",
           ["os"] = "",
           ["ot"] = "",
-          -- remap the sort options to work with 's' instead
           ["s"] = { "show_help", nowait = false, config = { title = "Order by", prefix_key = "s" } },
           ["sc"] = { "order_by_created", nowait = false },
           ["sd"] = { "order_by_diagnostics", nowait = false },
@@ -70,7 +62,6 @@ return {
           ["sn"] = { "order_by_name", nowait = false },
           ["ss"] = { "order_by_size", nowait = false },
           ["st"] = { "order_by_type", nowait = false },
-          -- get filepath with Y
           ["Y"] = { "copy_filepath_opts" },
         },
       },
