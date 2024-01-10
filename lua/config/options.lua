@@ -1,6 +1,6 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
---
+
 -- Undercurl
 vim.api.nvim_set_var("t_Cs", "e[4:3m")
 vim.api.nvim_set_var("t_Ce", "e[4:0m")
@@ -25,4 +25,5 @@ vim.api.nvim_set_hl(0, "SpellLocal", {
   undercurl = true,
   cterm = { underline = true },
 })
--- vim.opt.spell = true
+
+vim.opt.list = false

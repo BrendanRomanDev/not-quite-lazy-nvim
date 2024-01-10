@@ -12,3 +12,17 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.wo.conceallevel = 0
   end,
 })
+
+-- prevent the annoying leader spaces and comment continuations
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+  callback = function()
+    vim.cmd("set formatoptions-=cro")
+  end,
+})
+
+-- highlight the yanked work for 400ms before timing out
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+  callback = function()
+    vim.highlight.on_yank({ higroup = "Visual", timeout = 400 })
+  end,
+})
