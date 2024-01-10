@@ -1,6 +1,20 @@
+function ToggleSize()
+  local defaultWidth = 42
+  local status_ok, view = pcall(require, "nvim-tree.view")
+
+  if not status_ok then
+    return
+  end
+  local width = view.View.width
+  if width > defaultWidth then
+    view.resize(defaultWidth)
+  else
+    view.resize(80)
+  end
+end
+
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  enabled = false,
   keys = {
     { "<leader>e", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
     { "<leader>E", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
