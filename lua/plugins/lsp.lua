@@ -1,3 +1,5 @@
+local helpers = require("../helpers/lsp")
+
 return {
   {
     "williamboman/mason.nvim",
@@ -12,6 +14,17 @@ return {
         "typescript-language-server",
         "css-lsp",
       })
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    init = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      keys[#keys + 1] = {
+        "gd",
+        helpers.goToDefinition,
+        { desc = "Goto Definition" },
+      }
     end,
   },
 }

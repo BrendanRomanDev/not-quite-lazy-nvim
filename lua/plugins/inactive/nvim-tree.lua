@@ -1,5 +1,21 @@
 -- something is happening with nvim-tree that causes an 8 second slowdown if
 -- gitignored files have been opened. It's driving me insane, so neotree it is
+
+-- This is the ToggleSize Fn I liked to use , RIP
+function toggleSize()
+  local defaultWidth = 42
+  local status_ok, view = pcall(require, "nvim-tree.view")
+
+  if not status_ok then
+    return
+  end
+  local width = view.View.width
+  if width > defaultWidth then
+    view.resize(defaultWidth)
+  else
+    view.resize(80)
+  end
+end
 return {
   "nvim-tree/nvim-tree.lua",
   dependencies = {
@@ -9,7 +25,7 @@ return {
     { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
     {
       "<leader>t",
-      ToggleSize,
+      toggleSize,
       desc = "Toggle NvimTree Adaptive Size",
     },
   },
