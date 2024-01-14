@@ -9,6 +9,12 @@ return {
         sidebars = "transparent",
         floats = "transparent",
       },
+      -- not sure if this is working?? I think not :(
+      dim_inactive = {
+        enabled = true, -- dims the background color of inactive window
+        shade = "dark",
+        percentage = 0.25, -- percentage of the shade to apply to the inactive window
+      },
       floats = "transparent",
       sidebars = { "qf", "help", "terminal" },
       lualine_bold = true,

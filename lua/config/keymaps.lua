@@ -23,6 +23,9 @@ keymap({ "n", "v" }, "<leader>lf", function()
   Util.format({ force = true })
 end, { desc = "Format" })
 
+-- leader o is going to be in use by obsidian.nvim
+keymap("n", "<leader>o", "<Nop>", opts)
+
 -- create a copy rel path cmd for use in neotree (or anywhere else)
 vim.api.nvim_create_user_command("Cppath", function()
   local path = vim.fn.expand("%:p")
