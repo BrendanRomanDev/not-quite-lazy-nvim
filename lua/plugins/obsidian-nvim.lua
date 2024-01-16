@@ -20,8 +20,12 @@ return {
   opts = {
     workspaces = {
       {
-        name = "Personal",
-        path = "~/NoteVaults",
+        name = "BrenDev",
+        path = "~/ObsVaults/BrenDev/",
+      },
+      {
+        name = "ThriveNotes",
+        path = "~/ObsVaults/ThriveNotes/",
       },
     },
     note_id_func = function(title)

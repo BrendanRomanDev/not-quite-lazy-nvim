@@ -8,14 +8,6 @@ return {
     event = "VeryLazy",
     init = function()
       vim.api.nvim_create_augroup("MD_Preview", { clear = true })
-      -- don't care to run this on save
-      -- vim.api.nvim_create_autocmd("Filetype", {
-      --   group = "MD_Preview",
-      --   pattern = { "markdown" },
-      --   callback = function()
-      --     vim.keymap.set("n", "<C-m>", "<Cmd>MarkdownPreview<CR>", { silent = true, buffer = true })
-      --   end,
-      -- })
     end,
     config = function()
       vim.g.mkdp_page_title = "${name} - Preview"
@@ -25,38 +17,6 @@ return {
   {
     "jakewvincent/mkdnflow.nvim",
     opts = {},
-  },
-  {
-    "plasticboy/vim-markdown",
-    dependencies = "godlygeek/tabular",
-    ft = "markdown",
-    event = "VeryLazy",
-    config = function()
-      vim.g.vim_markdown_folding_disabled = 1
-      vim.g.vim_markdown_toc_autofit = 1
-      vim.g.vim_markdown_follow_anchor = 1
-      vim.g.vim_markdown_conceal = 1
-      vim.g.vim_markdown_conceal_code_blocks = 1
-      vim.g.vim_markdown_math = 1
-      vim.g.vim_markdown_frontmatter = 1
-      vim.g.vim_markdown_strikethrough = 1
-      vim.g.vim_markdown_new_list_item_indent = 4
-      vim.g.vim_markdown_edit_url_in = "tab"
-
-      -- vim.o.conceallevel = 3
-      -- obsidian.nvim wants conceallevel 2
-      vim.o.conceallevel = 2
-      vim.g.tex_conceal = ""
-
-      vim.api.nvim_create_augroup("Markdown", { clear = true })
-      vim.api.nvim_create_autocmd("Filetype", {
-        group = "Markdown",
-        pattern = { "markdown" },
-        callback = function()
-          vim.keymap.set("x", "<C-Enter>", ":<C-U>TableFormat<CR>", { silent = true })
-        end,
-      })
-    end,
   },
   {
     "lukas-reineke/headlines.nvim",
