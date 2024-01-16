@@ -21,7 +21,7 @@ return {
     workspaces = {
       {
         name = "Personal",
-        path = "~/NoteVaults/Personal",
+        path = "~/NoteVaults",
       },
     },
     note_id_func = function(title)
@@ -48,10 +48,9 @@ return {
         end,
         opts = { noremap = false, expr = true, buffer = true, desc = "go to file" },
       },
-      -- a GF option for
+      -- follow link in nvim > obsidian UI also follows
       ["gF"] = {
         action = function()
-          -- Open link in Obsidian when you jump
           vim.cmd("ObsidianOpen")
           return require("obsidian").util.gf_passthrough()
         end,
@@ -62,6 +61,36 @@ return {
           vim.cmd("ObsidianOpen")
         end,
         opts = { buffer = true, desc = "ObsidianOpen (UI)" },
+      },
+      ["<leader>on"] = {
+        action = function()
+          vim.cmd("ObsidianNew")
+        end,
+        opts = { buffer = true, desc = "ObsidianNew" },
+      },
+      ["<leader>od"] = {
+        action = function()
+          vim.cmd("ObsidianToday")
+        end,
+        opts = { buffer = true, desc = "Obsidian to[d]ay" },
+      },
+      ["<leader>om"] = {
+        action = function()
+          vim.cmd("ObsidianTomorrow")
+        end,
+        opts = { buffer = true, desc = "Obsidian to[m]orrow" },
+      },
+      ["<leader>oy"] = {
+        action = function()
+          vim.cmd("ObsidianYesterday")
+        end,
+        opts = { buffer = true, desc = "Obsidian [y]esterday" },
+      },
+      ["<leader>or"] = {
+        action = function()
+          vim.cmd("ObsidianRename")
+        end,
+        opts = { buffer = true, desc = "ObsidianRename" },
       },
       ["<leader>ot"] = {
         action = function()
@@ -96,6 +125,12 @@ return {
           vim.cmd("ObsidianLinkNew")
         end,
         opts = { buffer = true, desc = "Link new" },
+      },
+      ["<leader>os"] = {
+        action = function()
+          vim.cmd("ObsidianSearch")
+        end,
+        opts = { buffer = true, desc = "ObsidianSearch" },
       },
       -- Toggle check-boxes.
       ["<leader>oc"] = {

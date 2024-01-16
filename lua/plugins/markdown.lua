@@ -23,6 +23,10 @@ return {
     end,
   },
   {
+    "jakewvincent/mkdnflow.nvim",
+    opts = {},
+  },
+  {
     "plasticboy/vim-markdown",
     dependencies = "godlygeek/tabular",
     ft = "markdown",

@@ -7,6 +7,7 @@ return {
   },
   opts = {
     defaults = {
+      path_display = { shorten = 5, truncate = 5, "smart" },
       file_ignore_patterns = { ".git/", "node_modules" },
     },
   },

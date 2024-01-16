@@ -9,6 +9,7 @@ return {
   opts = {
     close_if_last_window = true,
     filesystem = {
+      bind_to_cwd = true,
       commands = {
         copy_filepath_opts = helpers.copyFilePathOpts,
       },
