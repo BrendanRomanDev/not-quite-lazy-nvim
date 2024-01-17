@@ -6,6 +6,8 @@
 
 _*This Readme is a WIP. This is my first edit. More to add later.*_
 
+- [CodeGpt](https://github.com/dpayne/CodeGPT.nvim)
+
 ## Note Taking
 
 - [Mkdnflow](https://github.com/jakewvincent/mkdnflow.nvim) for easier markdown workflow
