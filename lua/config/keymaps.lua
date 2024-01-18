@@ -45,6 +45,12 @@ keymap("n", "<A-k>", "<Nop>", opts)
 keymap("x", "<A-j>", "<Nop>", opts)
 keymap("x", "<A-j>", "<Nop>", opts)
 
+-- resize splits
+keymap("n", "<C-M-k>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+keymap("n", "<C-M-j>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+keymap("n", "<C-M-h>", "<cmd>vertical resize -6<cr>", { desc = "Decrease window width" })
+keymap("n", "<C-M-l>", "<cmd>vertical resize +6<cr>", { desc = "Increase window width" })
+
 -- clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
