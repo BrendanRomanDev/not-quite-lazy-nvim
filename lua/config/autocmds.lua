@@ -26,3 +26,27 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
     vim.highlight.on_yank({ higroup = "Visual", timeout = 400 })
   end,
 })
+
+vim.api.nvim_create_autocmd("VimLeavePre", {
+  callback = function(_, list)
+    for bufnr = 1, vim.fn.bufnr("$") do
+      if vim.fn.buflisted(bufnr) == 1 then
+        local bufname = vim.api.nvim_buf_get_name(bufnr)
+        local item = nil
+        for _, it in ipairs(list.items) do
+          local value = it.value
+          if value == bufname then
+            item = it
+            break
+          end
+        end
+        if item then
+          vim.api.nvim_set_current_buf(bufnr)
+          local pos = vim.api.nvim_win_get_cursor(0)
+          item.context.row = pos[1]
+          item.context.col = pos[2]
+        end
+      end
+    end
+  end,
+})
