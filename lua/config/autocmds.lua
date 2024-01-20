@@ -27,6 +27,7 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end,
 })
 
+-- fix for harpoon to tie it ot buffers and prevent swap file issues
 vim.api.nvim_create_autocmd("VimLeavePre", {
   callback = function(_, list)
     for bufnr = 1, vim.fn.bufnr("$") do
