@@ -13,6 +13,13 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown" },
+  callback = function()
+    vim.wo.spell = false
+  end,
+})
+
 -- prevent the annoying leader spaces and comment continuations
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   callback = function()
