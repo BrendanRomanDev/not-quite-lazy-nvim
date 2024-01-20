@@ -10,7 +10,7 @@ return {
         "luacheck",
         "shellcheck",
         "shfmt",
-        -- "tailwindcss-language-server",
+        "marksman",
         "typescript-language-server",
         "css-lsp",
       })
