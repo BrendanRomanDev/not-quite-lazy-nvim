@@ -1,12 +1,34 @@
-# WIP Todos
+# Todo / QOL enhancements
 
-- [ ] Inline **git** blame
-- [ ] Eslint errors not being fixed on [format](2024-01-20_format.md)
-- [ ] Inline diagnostics annoying
-- [ ] Markdown QOL stuff
+- [✓] env.local / env.development etc should be formatted and syntax highlit
+  properly (.example shouldn't however)
+- [✓] Eslint errors not being fixed on format
+- [✓] Inline diagnostics annoying
+- [✓] Add GPT
+- [ ] Inline **git** blame, or adjust ghb to be a better use experience. I
+      really liked gitblame tool in my pre-rolled
+- [ ] Red error text background is too harsh. Make pink or something
+- [ ] DelMarks command, figure out how to wipe all marks and make it more convenient
+
+- [⧖] Markdown QOL stuff:
+
+  - [✓] Headlines annoying white box, fix colors
+  - [✓] Conceal level on links is really annoying
+  - [✓] Get rid of folds on `<leader>f`, causes error
+  - [✓] gy mapping is off. should be go-to type definition.. is surround
+    related
+  - [✓] Telekasten Tag Search, fix plugin and vault switch
+  - [ ] Fix Telekasten Whichkey
   - [ ] Paste image in obsidian not working ?
-  - [ ] Zettlekasten Tag Search
-  - [ ] Conceal level on links is really annoying
-  - [ ] Get rid of folds on `<leader>f`, causes error
-- [ ] gy mapping is off. should be go-to type definition.. is surround related
-- [ ] cd shows code diagnostics, get trouble to stop showing inline
+
+- [ ] Whichkey edits:
+
+  - [ ] Too much info showing...
+  - [ ] Can you create a mapping to toggle which info shows?
+  - [ ] Maybe edit which_key delay to take longer to pop up (timeoutlen) Or put it on a
+        keymap?
+
+# Fun Challenges
+
+- [ ] Create fn to override / delete all default keymaps for a pluign.. then
+      you can add your own.

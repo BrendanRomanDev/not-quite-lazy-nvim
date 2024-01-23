@@ -1,5 +1,6 @@
 local M = {}
-
+-- this set of functions prevents raw react files from showing up in telescope,
+-- when you go to definition.
 local function filter(arr, fn)
   if type(arr) ~= "table" then
     return arr

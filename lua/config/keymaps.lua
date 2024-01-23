@@ -26,6 +26,14 @@ end, { desc = "Format" })
 -- leader o is going to be in use by obsidian.nvim
 keymap("n", "<leader>o", "<Nop>", opts)
 
+-- get rid of lazyvim leadercd for dioagnostics, put 'gl' in for hover diagnostics
+keymap("n", "<leader>cd", "<Nop>")
+keymap("n", "gl", vim.diagnostic.open_float, {
+  noremap = true,
+  silent = true,
+  desc = "Line Diagnostics",
+})
+
 -- create a copy rel path cmd for use in neotree (or anywhere else)
 vim.api.nvim_create_user_command("Cppath", function()
   local path = vim.fn.expand("%:p")

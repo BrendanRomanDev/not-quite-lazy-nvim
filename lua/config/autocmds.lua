@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- don't want spellcheck in md files
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown" },
   callback = function()

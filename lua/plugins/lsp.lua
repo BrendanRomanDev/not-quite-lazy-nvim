@@ -18,6 +18,21 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        virtual_text = false, -- Disables the inline 'ghost text'
+        signs = true, -- Shows signs in the sign column
+        underline = true, -- Underlines the text with errors or warnings
+        update_in_insert = false, -- Updates diagnostics in insert mode (set to true or false as per your preference)
+        severity_sort = true, -- Sorts diagnostics by severity
+        float = {
+          source = "always", -- Shows the source of the diagnostic in the floating window
+          border = "rounded", -- Sets the style of the border (e.g., "single", "double", "rounded", "solid", or "shadow")
+          header = "", -- Header text for the floating window (set to "" to disable)
+          prefix = "", -- Prefix for each diagnostic in the floating window
+        },
+      },
+    },
     init = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       keys[#keys + 1] = {
