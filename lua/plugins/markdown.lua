@@ -18,6 +18,7 @@ return {
   {
     "renerocksai/telekasten.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
+    commit = "8c2b3889eb31009ae510a43384d1957b37654176",
     -- stylua: ignore
       keys = {
 			{ '<leader>zn', function() require('telekasten').new_note() end, { desc = "new note" } },
@@ -33,6 +34,10 @@ return {
 			{ '<leader>zm', function() require('telekasten').browse_media() end, { desc = "browse media" } },
 		},
     opts = {
+      -- these next 2 do not work. You have to set them in the actual plugin
+      -- folder, which is why you locked the commit
+      auto_set_filetype = false,
+      take_over_my_home = false,
       -- this is not documented by the plugin. You either must set a
       -- default_vault or one of your vaults must be named 'default'
       -- https://github.com/renerocksai/telekasten.nvim/blob/617469cd0690c84264f7d472cf1fe860ccfc0832/lua/telekasten.lua#L2804

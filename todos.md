@@ -19,11 +19,12 @@
     related
   - [✓] Telekasten Tag Search, fix plugin and vault switch
   - [ ] Fix Telekasten Whichkey
+  - [ ] Telekasten vault switching overrides filetype.. can you just make
+        autocommand to set it back...
   - [ ] Paste image in obsidian not working ?
 
 - [ ] Whichkey edits:
-
-  - [ ] Too much info showing...
+  - [ ] [Too](2024-01-23_too.md) much info showing...
   - [ ] Can you create a mapping to toggle which info shows?
   - [ ] Maybe edit which_key delay to take longer to pop up (timeoutlen) Or put it on a
         keymap?
@@ -32,3 +33,5 @@
 
 - [ ] Create fn to override / delete all default keymaps for a pluign.. then
       you can add your own.
+- [ ] Get Telekasten and Obsidian 'talking', maybe connect lua-line to show
+      what workspace you're in?

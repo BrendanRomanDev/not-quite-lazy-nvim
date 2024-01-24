@@ -1,3 +1,5 @@
+local mdHelper = require("../helpers/markdown")
+
 return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
@@ -18,6 +20,7 @@ return {
     "hrsh7th/nvim-cmp",
     "nvim-telescope/telescope.nvim",
     "nvim-treesitter/nvim-treesitter",
+    -- "renerocksai/telekasten.nvim",
   },
   opts = {
     workspaces = {
@@ -49,17 +52,7 @@ return {
       -- stylua: ignore
     mappings = {
       ["ow"] = {
-        -- TODO: export / import as util for readability connect telekasten switch too?
-        action = function()
-          local workspaceNames = { bd = 'BrenDev', brendev = 'BrenDev', tw = 'ThriveNotes', ThriveNotes = 'ThriveNotes'}
-          local input = vim.fn.input({prompt = "Obsidian Workspace:"})
-            if (workspaceNames[input] == nil) then
-                 vim.notify(input .. 'does not map to an Obsidian workspace')
-                 return nil
-            end
-          vim.cmd("ObsidianWorkspace " .. workspaceNames[input] )
-        end,
-          -- vim.cmd("ObsidianWorkspace") end,
+        action = mdHelper.promptObsidianWorkspace,
         opts = { buffer = true, desc = "Obsidian Workspace" },
       },
       -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
