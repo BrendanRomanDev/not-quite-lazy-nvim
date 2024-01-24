@@ -20,6 +20,14 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- undo telekasten.nvim setting md filetype to telekasten
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "telekasten" },
+  callback = function()
+    vim.cmd("set filetype=markdown")
+  end,
+})
+
 -- prevent the annoying leader spaces and comment continuations
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   callback = function()
