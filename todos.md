@@ -18,6 +18,7 @@
   - [✓] gy mapping is off. should be go-to type definition.. is surround
     related
   - [✓] Telekasten Tag Search, fix plugin and vault switch
+  - [ ] Enter creates link, super annoying
   - [ ] Fix Telekasten Whichkey
   - [ ] Telekasten vault switching overrides filetype.. can you just make
         autocommand to set it back...
@@ -35,4 +36,4 @@
       you can add your own.
 - [ ] Get Telekasten and Obsidian 'talking', maybe connect lua-line to show
       what workspace you're in?
-- [ ] Make simple plenary / telescope finder for #tags in your root directory.
+- [ ] Make simple telescope finder for #tags in your chosen vault.
