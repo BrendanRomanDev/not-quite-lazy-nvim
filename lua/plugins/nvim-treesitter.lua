@@ -18,11 +18,10 @@ return {
 
     -- parse env files as 'sh'
     vim.filetype.add({
-      extension = { sh = "dotenv" },
-      filename = {
-        [".env"] = "dotenv",
-        ["env"] = "dotenv",
-      },
+      -- extension = { sh = "dotenv" },
+      -- filename = {
+      --   [".env"] = "dotenv",
+      -- },
       pattern = {
         -- INFO: Match filenames like - ".env.example", ".env.local" and so on
         ["%.env%.[%w_.-]+"] = "sh",
