@@ -58,6 +58,7 @@ return {
       mappings = {
         MkdnFoldSection = false,
         MkdnUnfoldSection = false,
+        MkdnEnter = false,
       },
       to_do = { symbols = { " ", "⧖", "✓" } },
     },

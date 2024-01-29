@@ -33,12 +33,41 @@ return {
         path = "~/ObsVaults/ThriveNotes/",
       },
     },
+    detect_cwd = true,
+    daily_notes = {
+      folder = "/dailies",
+      -- Optional, if you want to change the date format for the ID of daily notes.
+      date_format = "%Y-%m-%d",
+      -- Optional, if you want to change the date format of the default alias of daily notes.
+      alias_format = "%B %-d, %Y",
+      -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+      template = "daily.md",
+    },
+    templates = {
+      subdir = "templates",
+      date_format = "%Y-%m-%d",
+      time_format = "%H:%M",
+      -- A map for custom variables, the key should be the variable and the value a function
+      substitutions = {},
+    },
+    note_id_func = function(title)
+      -- Create new note IDs in a Zettelkasten format with a timestamp and a suffix.
+      -- In this case a note with the title 'My new note' will given an ID that looks
+      -- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
+      local suffix = ""
+      if title ~= nil then
+        -- If title is given, transform it into valid file name.
+        suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+      else
+        -- If title is nil, just add 4 random uppercase letters to the suffix.
+        for _ = 1, 4 do
+          suffix = suffix .. string.char(math.random(65, 90))
+        end
+      end
+      return suffix
+    end,
       -- stylua: ignore
     mappings = {
-      ["ow"] = {
-        action = mdHelper.promptObsidianWorkspace,
-        opts = { buffer = true, desc = "Obsidian Workspace" },
-      },
       -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
       ["gf"] = {
         action = function() return require("obsidian").util.gf_passthrough() end,
@@ -88,6 +117,15 @@ return {
       },
       ["<leader>os"] = { action = function() vim.cmd("ObsidianSearch") end,
         opts = { buffer = true, desc = "ObsidianSearch" },
+      },
+      -- switch vault / workspace
+      ["ov"] = {
+        action = mdHelper.promptObsidianWorkspace,
+        opts = { buffer = true, desc = "Obsidian Vault" },
+      },
+      ["oh"] = {
+        action = mdHelper.promptObsidianTags,
+        opts = { buffer = true, desc = "ObsidianTags" },
       },
       -- Toggle check-boxes.
       ["<leader>oc"] = { action = function() return require("obsidian").util.toggle_checkbox() end,
