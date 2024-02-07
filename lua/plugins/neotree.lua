@@ -2,6 +2,9 @@ local helpers = require("../helpers/neotree")
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  -- locking to tag until below issue is resolved
+  -- https://github.com/nvim-neo-tree/neo-tree.nvim/issues/1310
+  tag = "3.14",
   keys = {
     { "<leader>e", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
     { "<leader>E", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },

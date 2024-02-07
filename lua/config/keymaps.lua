@@ -50,8 +50,8 @@ keymap("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
 -- Unmap <Alt-[j|k]>
 keymap("n", "<A-j>", "<Nop>", opts)
 keymap("n", "<A-k>", "<Nop>", opts)
-keymap("x", "<A-j>", "<Nop>", opts)
 keymap("x", "<A-k>", "<Nop>", opts)
+keymap("x", "<A-j>", "<Nop>", opts)
 
 -- resize splits
 keymap("n", "<C-M-k>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
