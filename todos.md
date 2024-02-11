@@ -5,10 +5,12 @@
 - [✓] Eslint errors not being fixed on format
 - [✓] Inline diagnostics annoying
 - [✓] Add GPT
+- [✓] Red error text background is too harsh. Make pink or something
 - [ ] Inline **git** blame, or adjust ghb to be a better use experience. I
-      really liked gitblame tool in my pre-rolled
-- [ ] Red error text background is too harsh. Make pink or something
-- [ ] DelMarks command, figure out how to wipe all marks and make it more convenient
+      really liked gitblame tool in my pre-rolled, allowed opening
+- [ ] DelMarks command, figure out how to wipe all marks and make it more convenient?
+- [ ] cool-substitute: Before, i could just hit gm or gM, which would allow me
+      to make a change and then edit next ones. now, i have to hit <leader>cr and it's lame.
 
 - [⧖] Markdown QOL stuff:
 
