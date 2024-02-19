@@ -12,7 +12,13 @@ return {
       floats = "transparent",
       sidebars = { "qf", "help", "terminal" },
       lualine_bold = true,
+      on_colors = function(colors)
+        colors.hint = colors.orange
+        colors.error = colors.red300
+      end,
       on_highlights = function(hl, c)
+        hl.ErrorMsg = { guibg = c.transparent, ctermbg = c.transparent }
+        hl.Error = { guibg = c.transparent, ctermbg = c.transparent }
         hl.NormalNC = { guibg = c.transparent, ctermbg = c.transparent }
         hl.Normal = { guibg = c.transparent, ctermbg = c.transparent }
         hl.NormalFloat = { guibg = c.transparent, ctermbg = c.transparent }
