@@ -3,6 +3,26 @@ return {
 
   opts = function(_, opts)
     opts.ensure_installed = {
+      "bash",
+      "c",
+      "diff",
+      "html",
+      "javascript",
+      "jsdoc",
+      "json",
+      "jsonc",
+      "lua",
+      "luadoc",
+      "luap",
+      "python",
+      "query",
+      "regex",
+      "toml",
+      "tsx",
+      "typescript",
+      "vim",
+      "vimdoc",
+      "yaml",
       -- .md issue
       -- https://www.reddit.com/r/neovim/comments/vr9m43/comment/ieur3oj/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
       -- markdown_inline handles bold / italics showing in terminal. Does not
