@@ -4,6 +4,7 @@ local workspaceAliases = {
   bd = "BrenDev",
   brendev = "BrenDev",
   tw = "ThriveNotes",
+  tn = "ThriveNotes",
   thrivenotes = "ThriveNotes",
 }
 
