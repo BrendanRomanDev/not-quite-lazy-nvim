@@ -26,11 +26,11 @@ return {
     workspaces = {
       {
         name = "BrenDev",
-        path = "~/ObsVaults/BrenDev/",
+        path = "~/Notes/BrenDev/",
       },
       {
         name = "ThriveNotes",
-        path = "~/ObsVaults/ThriveNotes/",
+        path = "~/Notes/ThriveNotes/",
       },
     },
     detect_cwd = true,
