@@ -11,7 +11,7 @@ return {
     -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
     "BufReadPre "
       .. vim.fn.expand("~")
-      .. "/ObsVaults/**.md",
+      .. "/Notes/**.md",
     "BufNewFile " .. vim.fn.expand("~") .. "/ObsVaults/**.md",
   },
   dependencies = {

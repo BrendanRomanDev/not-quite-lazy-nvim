@@ -44,10 +44,10 @@ return {
       default_vault = "BrenDev",
       vaults = {
         BrenDev = {
-          home = vim.fn.expand("~/ObsVaults/BrenDev"),
+          home = vim.fn.expand("~/Notes/BrenDev"),
         },
         ThriveNotes = {
-          home = vim.fn.expand("~/ObsVaults/ThriveNotes"),
+          home = vim.fn.expand("~/Notes/ThriveNotes"),
         },
       },
     },
