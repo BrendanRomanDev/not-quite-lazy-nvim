@@ -21,7 +21,6 @@ return {
     opts = {
       diagnostics = {
         virtual_text = false, -- Disables the inline 'ghost text'
-        signs = true, -- Shows signs in the sign column
         underline = true, -- Underlines the text with errors or warnings
         update_in_insert = false, -- Updates diagnostics in insert mode (set to true or false as per your preference)
         severity_sort = true, -- Sorts diagnostics by severity

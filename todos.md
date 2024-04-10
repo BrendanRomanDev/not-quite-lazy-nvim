@@ -27,7 +27,7 @@
   - [ ] Paste image in obsidian not working ?
 
 - [ ] Whichkey edits:
-  - [ ] [Too](2024-01-23_too.md) much info showing...
+  - [ ] Too much info showing...
   - [ ] Can you create a mapping to toggle which info shows?
   - [ ] Maybe edit which_key delay to take longer to pop up (timeoutlen) Or put it on a keymap?
   - [ ] gd doesn't show in whichkey (go to definition ?)
