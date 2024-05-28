@@ -6,10 +6,8 @@ return {
   },
   config = function()
     require("codegpt.config")
-    vim.g["codegpt_commands"] = {
-      ["explain"] = {
-        callback_type = "code_popup",
-      },
+    vim.g["codegpt_global_commands_defaults"] = {
+      model = "gpt-4o",
     }
   end,
 }
