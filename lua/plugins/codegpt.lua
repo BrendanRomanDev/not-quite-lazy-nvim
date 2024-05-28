@@ -9,5 +9,10 @@ return {
     vim.g["codegpt_global_commands_defaults"] = {
       model = "gpt-4o",
     }
+    vim.g["codegpt_commands"] = {
+      ["test"] = {
+        callback_type = "code_popup",
+      },
+    }
   end,
 }
