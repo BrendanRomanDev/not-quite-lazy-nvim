@@ -31,6 +31,23 @@ return {
           prefix = "", -- Prefix for each diagnostic in the floating window
         },
       },
+      servers = {
+        tailwindcss = {
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  { "Variants \\=([^;]*);", '"([^"]*)"' },
+                  { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+                  { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                  { "cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+                  { "([a-zA-Z0-9\\-:]+)" },
+                },
+              },
+            },
+          },
+        },
+      },
     },
     init = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()

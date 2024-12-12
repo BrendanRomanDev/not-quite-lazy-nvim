@@ -16,6 +16,7 @@ function toggleSize()
     view.resize(80)
   end
 end
+
 return {
   "nvim-tree/nvim-tree.lua",
   dependencies = {
