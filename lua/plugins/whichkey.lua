@@ -7,10 +7,14 @@ return {
     --   },
     -- },
     spec = {
-      ["<leader>l"] = { name = "+lazy/+liveserver", u = "Live Server Up", d = "Live Server Down" },
-      ["<leader>z"] = { name = "+telekasten", n = "new note", t = "tag search" },
-      -- which-key needs an initial  to set the leader prefix, then others will still work
-      ["<leader>o"] = { name = "+obsidian", c = "toggle checkbox" },
+      { "<leader>l", group = "lazy/+liveserver" },
+      { "<leader>ld", desc = "Live Server Down" },
+      { "<leader>lu", desc = "Live Server Up" },
+      { "<leader>o", group = "obsidian" },
+      { "<leader>oc", desc = "toggle checkbox" },
+      { "<leader>z", group = "telekasten" },
+      { "<leader>zn", desc = "new note" },
+      { "<leader>zt", desc = "tag search" },
     },
   },
 }
