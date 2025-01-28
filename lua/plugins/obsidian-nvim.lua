@@ -119,11 +119,11 @@ return {
         opts = { buffer = true, desc = "ObsidianSearch" },
       },
       -- switch vault / workspace
-      ["ov"] = {
+      ["<leader>ov"] = {
         action = mdHelper.promptObsidianWorkspace,
         opts = { buffer = true, desc = "Obsidian Vault" },
       },
-      ["oh"] = {
+      ["<leader>oh"] = {
         action = mdHelper.promptObsidianTags,
         opts = { buffer = true, desc = "ObsidianTags" },
       },
