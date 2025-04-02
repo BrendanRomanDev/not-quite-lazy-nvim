@@ -9,15 +9,19 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "folke/noice.nvim",
   },
+  init = function()
+    require("helpers.companion-notification").init()
+  end,
   keys = {
     {
-      "<leader>ai",
+      "<leader>aI",
       "<cmd>CodeCompanionChat Toggle<cr>",
       desc = "Toggle CodeCompanion Chat",
     },
     {
-      "<leader>aI",
+      "<leader>ai",
       ":CodeCompanion ",
       desc = "Run CodeCompanion Prompt",
       mode = "n",
