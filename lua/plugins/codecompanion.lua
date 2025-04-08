@@ -60,6 +60,9 @@ return {
         }),
       },
       strategies = {
+        chat = {
+          adapter = "openai",
+        },
         inline = {
           adapter = "openai",
           keymaps = {
