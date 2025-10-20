@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.animate",
+    "nvim-mini/mini.animate",
     opts = {
       open = {
         enable = false,
@@ -11,7 +11,7 @@ return {
     },
   },
   {
-    "echasnovski/mini.bufremove",
+    "nvim-mini/mini.bufremove",
     keys = {
       {
         "<S-q>",
@@ -36,7 +36,7 @@ return {
     opts = {},
   },
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     opts = {
       mappings = {
         add = "ys",
