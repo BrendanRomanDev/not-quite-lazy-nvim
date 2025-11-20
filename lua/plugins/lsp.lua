@@ -32,6 +32,11 @@ return {
         },
       },
       servers = {
+        ["*"] = {
+          keys = {
+            { "gd", helpers.goToDefinition, desc = "Goto Definition" },
+          },
+        },
         tailwindcss = {
           settings = {
             tailwindCSS = {
@@ -49,13 +54,5 @@ return {
         },
       },
     },
-    init = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      keys[#keys + 1] = {
-        "gd",
-        helpers.goToDefinition,
-        { desc = "Goto Definition" },
-      }
-    end,
   },
 }
