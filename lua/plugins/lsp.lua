@@ -1,4 +1,4 @@
-local helpers = require("../helpers/lsp")
+local helpers = require("helpers.lsp")
 
 return {
   {
@@ -7,7 +7,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "stylua",
         "selene",
-        "luacheck",
+            "luacheck",
         "shellcheck",
         "shfmt",
         "marksman",
