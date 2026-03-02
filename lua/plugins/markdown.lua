@@ -60,7 +60,14 @@ return {
         MkdnUnfoldSection = false,
         MkdnEnter = false,
       },
-      to_do = { symbols = { " ", "⧖", "✓" } },
+      to_do = {
+        statuses = {
+          not_started = { marker = " " },
+          in_progress = { marker = "⧖" },
+          complete = { marker = "✓" },
+        },
+        status_order = { "not_started", "in_progress", "complete" },
+      },
     },
   },
   {
