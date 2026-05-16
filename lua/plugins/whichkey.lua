@@ -7,6 +7,7 @@ return {
     --   },
     -- },
     spec = {
+      { "<leader>a", group = "ai/claude" },
       { "<leader>l", group = "lazy/+liveserver" },
       { "<leader>ld", desc = "Live Server Down" },
       { "<leader>lu", desc = "Live Server Up" },
