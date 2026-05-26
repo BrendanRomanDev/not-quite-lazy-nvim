@@ -90,15 +90,13 @@ return {
     "folke/which-key.nvim",
     opts = {
       spec = {
+        -- groups
         { "<leader>a", group = "ai/claude" },
+        { "<leader>g", group = "git" },
         { "<leader>l", group = "lazy/+liveserver" },
-        { "<leader>ld", desc = "Live Server Down" },
-        { "<leader>lu", desc = "Live Server Up" },
         { "<leader>o", group = "obsidian" },
-        { "<leader>oc", desc = "toggle checkbox" },
+        { "<leader>y", group = "harpoon" },
         { "<leader>z", group = "telekasten" },
-        { "<leader>zn", desc = "new note" },
-        { "<leader>zt", desc = "tag search" },
       },
     },
   },

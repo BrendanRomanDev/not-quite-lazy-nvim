@@ -20,19 +20,19 @@ return {
     dependencies = { "nvim-telescope/telescope.nvim" },
     commit = "8c2b3889eb31009ae510a43384d1957b37654176",
     -- stylua: ignore
-      keys = {
-			{ '<leader>zn', function() require('telekasten').new_note() end, { desc = "new note" } },
-			{ '<leader>zN', function() require('telekasten').new_templated_note() end, { desc = "new templated note" } },
-			{ '<leader>zf', function() require('telekasten').find_notes() end, { desc = "find notes" }  },
-			{ '<leader>zg', function() require('telekasten').search_notes() end, { desc = 'search notes'} },
-			{ '<leader>zo', function() require('telekasten').panel() end, { desc = "panel" } },
-			{ '<leader>zt', function() require('telekasten').show_tags() end, { desc = "show tags" } },
-			{ '<leader>zv', function() require('telekasten').switch_vault() end, { desc = "switch vault" } },
-			{ '<leader>zd', function() require('telekasten').find_daily_notes() end, { desc = "find daily notes" } },
-			{ '<leader>zb', function() require('telekasten').show_backlinks() end, { desc = "show backlinks" } },
-			{ '<leader>zl', function() require('telekasten').find_friends() end, { desc = "find friends" }  },
-			{ '<leader>zm', function() require('telekasten').browse_media() end, { desc = "browse media" } },
-		},
+    keys = {
+      { '<leader>zn', function() require('telekasten').new_note() end, desc = "new note" },
+      { '<leader>zN', function() require('telekasten').new_templated_note() end, desc = "new templated note" },
+      { '<leader>zf', function() require('telekasten').find_notes() end, desc = "find notes" },
+      { '<leader>zg', function() require('telekasten').search_notes() end, desc = "search notes" },
+      { '<leader>zo', function() require('telekasten').panel() end, desc = "panel" },
+      { '<leader>zt', function() require('telekasten').show_tags() end, desc = "show tags" },
+      { '<leader>zv', function() require('telekasten').switch_vault() end, desc = "switch vault" },
+      { '<leader>zd', function() require('telekasten').find_daily_notes() end, desc = "find daily notes" },
+      { '<leader>zb', function() require('telekasten').show_backlinks() end, desc = "show backlinks" },
+      { '<leader>zl', function() require('telekasten').find_friends() end, desc = "find friends" },
+      { '<leader>zm', function() require('telekasten').browse_media() end, desc = "browse media" },
+    },
     opts = {
       -- these next 2 do not work. You have to set them in the actual plugin
       -- folder, which is why you locked the commit

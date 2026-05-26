@@ -21,10 +21,10 @@ local opts = {
 -- formatting
 keymap({ "n", "v" }, "<leader>lf", function()
   Util.format({ force = true })
-end, { desc = "Format" })
+end, { desc = "Format (force)" })
 
 -- leader o is going to be in use by obsidian.nvim
-keymap("n", "<leader>o", "<Nop>", opts)
+keymap("n", "<leader>o", "<Nop>", { noremap = true, silent = true, desc = "obsidian" })
 
 -- get rid of lazyvim leadercd for dioagnostics, put 'gl' in for hover diagnostics
 keymap("n", "<leader>cd", "<Nop>")
@@ -60,7 +60,7 @@ keymap("n", "<C-M-h>", "<cmd>vertical resize -6<cr>", { desc = "Decrease window 
 keymap("n", "<C-M-l>", "<cmd>vertical resize +6<cr>", { desc = "Increase window width" })
 
 -- clear highlights
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { noremap = true, silent = true, desc = "Clear highlights" })
 
 -- do not yank with x key
 keymap("n", "x", '"_x')
