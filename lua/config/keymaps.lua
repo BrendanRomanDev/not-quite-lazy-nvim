@@ -13,6 +13,9 @@ local Util = require("lazyvim.util")
 local keymap = vim.keymap.set
 local keydel = vim.keymap.del
 
+-- Commander modal launcher (lua/commander.lua) — binds <leader>;
+require("commander").setup()
+
 local opts = {
   noremap = true,
   silent = true,
